@@ -1,0 +1,19 @@
+logging:
+  level:
+    root: WARN
+    org.springframework: INFO
+    uk.co.mulecode.sample: DEBUG
+
+info:
+  app:
+    name: sample-name
+    description: sample description
+
+server:
+  port: 8080
+  servlet:
+    context-path: /myappname
+
+spring:
+  thymeleaf:
+    cache: false
