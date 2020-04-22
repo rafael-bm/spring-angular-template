@@ -1,4 +1,7 @@
-<app-top-header></app-top-header>
+<app-top-header [avatar]="userDetails.picture"
+                [name]="userDetails.name"
+                [email]="userDetails.email">
+</app-top-header>
 
 <div class="content">
   <router-outlet></router-outlet>

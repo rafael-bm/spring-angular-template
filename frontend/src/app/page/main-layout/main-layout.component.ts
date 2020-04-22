@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {UserDetailsResponse, UserService} from '../../service/user.service';
 
 @Component({
   selector: 'app-main-layout',
@@ -7,10 +8,22 @@ import {Component, OnInit} from '@angular/core';
 })
 export class MainLayoutComponent implements OnInit {
 
-  constructor() {
+  userDetails: UserDetailsResponse;
+
+  constructor(private sampleService: UserService) {
   }
 
   ngOnInit(): void {
+    this.sampleService.userDetails.subscribe(value => {
+      if (value) {
+        this.userDetails = value;
+      }
+    });
+    this.loadDetails();
+  }
+
+  loadDetails(): void {
+    this.sampleService.loadUserDetails().then();
   }
 
 }

@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {SampleService} from '../../service/sample.service';
 
 @Component({
   selector: 'app-home-page',
@@ -8,20 +7,12 @@ import {SampleService} from '../../service/sample.service';
 })
 export class HomePageComponent implements OnInit {
 
-  serverTime: string;
 
-  constructor(private sampleService: SampleService) {
+  constructor() {
   }
 
   ngOnInit(): void {
-  }
 
-  getServerTime(): void {
-    this.serverTime = '';
-    this.sampleService.serverTime()
-    .then(value =>
-      this.serverTime = value.time
-    );
   }
 
 }

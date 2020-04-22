@@ -4,6 +4,7 @@ import {MainLayoutComponent} from './main-layout/main-layout.component';
 import {HomePageComponent} from './home-page/home-page.component';
 import {RouterModule} from '@angular/router';
 import {CollectionModule} from '../collection/collection.module';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 
 @NgModule({
@@ -11,6 +12,7 @@ import {CollectionModule} from '../collection/collection.module';
   imports: [
     CommonModule,
     RouterModule,
+    FlexLayoutModule,
     CollectionModule
   ]
 })

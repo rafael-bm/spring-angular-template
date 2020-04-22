@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="utf-8">
+    <!--        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+    <title>Login</title>
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.4.1/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            background-color: #e0e0e0;
+        }
+
+        .logo {
+            background-image: url('static/images/logo.png');
+            background-size: cover;
+            display: inline-block;
+            height: 100px;
+            width: 90px;
+        }
+
+        .fa-google {
+            background: #dd4b39;
+            color: white;
+        }
+
+        .btn-google {
+            background-color: #dd4b39;
+            width: 100%;
+            color: white;
+        }
+
+        .btn-google:hover {
+            background-color: #f44336;
+            width: 100%;
+            color: white;
+        }
+
+        .wrapper {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .alert-message {
+            font-size: small;
+            font-style: italic;
+            background-color: #e0e0e0;
+            border-left: 2px solid #bdbdbd;
+            margin: 15px 0;
+            padding: 10px;
+        }
+
+        .btn {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="shadow-sm card bg-white mb-3" style="max-width: 20rem;">
+        <div class="card-body">
+            <div class="d-flex justify-content-center mb-3">
+                <div class="p-2 logo"></div>
+            </div>
+
+            <div th:if="${param.error}" class="alert-message">
+                Invalid username and password.
+            </div>
+
+            <div th:if="${param.logout}" class="alert-message">
+                You have been logged out.
+            </div>
+
+            <h6 class="card-subtitle mb-2 text-muted">Login with:</h6>
+
+            <a href="oauth2/authorization/google" class="btn btn-google">
+                <i class="fa fa-google"></i>
+                <span>Sign in with Google</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" th:src="@{webjars/jquery/3.0.0/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{webjars/bootstrap/4.4.1/js/bootstrap.min.js}"></script>
+</body>
+</html>

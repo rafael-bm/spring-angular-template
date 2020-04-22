@@ -17,3 +17,13 @@ server:
 spring:
   thymeleaf:
     cache: false
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: <client_id>
+            client-secret: <client_secret>
+            accessTokenUri: https://www.googleapis.com/oauth2/v4/token
+            userAuthorizationUri: https://accounts.google.com/o/oauth2/v2/auth
+            clientAuthenticationScheme: form
