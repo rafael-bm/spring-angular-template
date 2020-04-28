@@ -6,6 +6,7 @@ import {AppComponent} from './app.component';
 import {CollectionModule} from './collection/collection.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {HttpClientModule} from '@angular/common/http';
+import {PipeModule} from './pipe/pipe.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {HttpClientModule} from '@angular/common/http';
     HttpClientModule,
     AppRoutingModule,
     FlexLayoutModule,
-    CollectionModule
+    CollectionModule,
+    PipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

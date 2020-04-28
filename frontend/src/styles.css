@@ -9,6 +9,7 @@
 html {
   position: relative;
   min-height: 100%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 body {

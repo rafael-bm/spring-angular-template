@@ -6,9 +6,11 @@
 
   <span class="spacer"></span>
 
-  <button mat-icon-button [matMenuTriggerFor]="profileMenu">
-    <img class="avatar" [src]="avatar">
+  <button mat-icon-button [matMenuTriggerFor]="profileMenu" class="mat-icon-button-bg">
+    <img *ngIf="avatar" class="avatar" [src]="avatar">
+    <span *ngIf="!avatar">{{name | shortName:2}}</span>
   </button>
+
   <mat-menu #profileMenu="matMenu">
     <div class="menu-title">
       <span class="menu-name">{{name}}</span><br/>

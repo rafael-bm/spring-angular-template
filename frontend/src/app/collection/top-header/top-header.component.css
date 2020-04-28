@@ -29,3 +29,8 @@
 .spacer {
   flex: 1 1 auto;
 }
+
+.mat-icon-button-bg {
+  background-color: #f3f3f3;
+  color: #5e5e5e;
+}

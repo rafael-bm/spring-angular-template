@@ -8,6 +8,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ConfirmDialogComponent} from './confirm-dialog/confirm-dialog.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import {PipeModule} from '../pipe/pipe.module';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     CommonModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
+    PipeModule,
     MatToolbarModule,
     MatButtonModule,
     MatMenuModule,
