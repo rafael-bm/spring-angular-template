@@ -22,6 +22,12 @@ frontend-run:
 	popd; \
 
 .ONESHELL:
+backend-stub-wrapper:
+	pushd backend_stub; \
+	gradle wrapper; \
+	popd; \
+
+.ONESHELL:
 backend-stub-run:
 	pushd backend_stub; \
 	./gradlew run; \

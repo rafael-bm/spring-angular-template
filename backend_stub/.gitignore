@@ -3,6 +3,8 @@ gradle/
 .gradle/
 build/
 out/
+gradlew
+gradlew.bat
 .idea/
 *.iml
 # local profile (private)
